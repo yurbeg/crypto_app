@@ -1,4 +1,4 @@
-export type CureencyResponseModel = {
+export type CurrencyListResponseModel = {
     id:string,
     name:string,
     image :string,
