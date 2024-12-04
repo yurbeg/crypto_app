@@ -8,5 +8,5 @@ export type CurrencyDetailResponseModel = {
         thumb:string
     },
     total_supply:number,
-    
+    prices:[]
 }

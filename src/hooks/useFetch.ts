@@ -22,7 +22,7 @@ export function useFetch<T>({
               'Content-Type':"application/json",
               ...header
             },
-            body: method != 'GET' && body ? JSON.stringify(body) : undefined
+            body: method !== 'GET' && body ? JSON.stringify(body) : undefined
           }
             const response = await fetch(url,options);
             const responseData = await response.json();
@@ -34,7 +34,7 @@ export function useFetch<T>({
         finally{
             setLoading(false)
         }
-    },[url])
+    },[url,method])
 
     useEffect(()=>{
         fetchData()
